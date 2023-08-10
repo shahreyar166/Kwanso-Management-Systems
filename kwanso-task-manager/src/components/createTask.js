@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Header from "./header";
+import { useNavigate } from "react-router-dom";
 
 const TaskForm = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState(null);
@@ -21,6 +23,8 @@ const TaskForm = () => {
 
     setName("");
     setDescription("");
+
+    navigate("/list-tasks");
   };
 
   const handleDescriptionChange = (event) => {
