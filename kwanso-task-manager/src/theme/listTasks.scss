@@ -1,0 +1,59 @@
+.kw-list {
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__list-item {
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        width: 250px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    &__name-tag,
+    &__desc-tag {
+        flex: 1;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        max-height: 90px;
+    }
+
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        background-color: #3498db;
+        padding: 0 15px;
+        border-radius: 10px;
+    }
+
+    &__delete-button {
+        background-color: #ed0505;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(138, 3, 3);
+        }
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+    }
+}
